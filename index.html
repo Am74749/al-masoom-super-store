@@ -3,91 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Al Masoom Super Store</title>
+
+<title>Al Masoom Super Store | Bahawalnagar</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
-header{background:#123f61;color:white;padding:18px;text-align:center;font-size:22px;font-weight:bold}
-.hero{background:linear-gradient(135deg,#15577c,#237d98);color:white;text-align:center;padding:55px 20px}
-.hero h1{font-size:34px;margin:0 0 14px}
-.hero p{font-size:17px;margin-bottom:25px}
-.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;text-decoration:none;padding:13px 24px;border-radius:7px;font-weight:bold}
-.whatsapp{background:#20d566;color:white}
-.call{background:white;color:#173d5b}
-.section{padding:42px 15px;max-width:1000px;margin:auto}
-.section h2{text-align:center;color:#173d5b;font-size:28px;margin-bottom:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-.card{background:white;border-radius:12px;padding:28px 18px;text-align:center;box-shadow:0 5px 18px rgba(0,0,0,.08)}
-.icon{font-size:44px}
-.card h3{font-size:19px}
-.card p{color:#505968}
-.visit{background:#123f61;color:white;text-align:center;padding:42px 20px}
-.visit h2{color:white}
-.info{max-width:600px;margin:auto;text-align:left;line-height:1.8}
-.info a{color:white}
-.visit .buttons{margin-top:24px}
-footer{background:#08283d;color:white;text-align:center;padding:18px}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.6;
+}
+
+header{
+  background:#123f60;
+  color:white;
+  text-align:center;
+  padding:18px 12px;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.hero{
+  background:linear-gradient(135deg,#176b88,#238aa5);
+  color:white;
+  text-align:center;
+  padding:55px 20px;
+}
+
+.hero h1{
+  font-size:36px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:25px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:13px 24px;
+  border-radius:8px;
+  font-weight:bold;
+  color:white;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.call{
+  background:#ffffff;
+  color:#123f60;
+}
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:45px 15px;
+}
+
+section h2{
+  text-align:center;
+  color:#123f60;
+  font-size:28px;
+  margin-bottom:28px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  padding:28px 18px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+.icon{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#68717d;
+}
+
+.info{
+  background:#123f60;
+  color:white;
+  text-align:center;
+  padding:45px 20px;
+}
+
+.info h2{
+  color:white;
+}
+
+.info p{
+  font-size:17px;
+  margin:8px 0;
+}
+
+.info a{
+  color:white;
+}
+
+.map-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:13px 24px;
+  background:#ffffff;
+  color:#123f60 !important;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+footer{
+  background:#082b3d;
+  color:white;
+  text-align:center;
+  padding:18px;
+}
+
+@media(max-width:600px){
+  header{
+    font-size:21px;
+  }
+
+  .hero{
+    padding:45px 15px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  section{
+    padding:38px 12px;
+  }
+}
 </style>
 </head>
+
 <body>
 
-<header>Al Masoom Super Store</header>
+<header>
+  Al Masoom Super Store
+</header>
 
 <section class="hero">
-<h1>Al Masoom Super Store</h1>
-<p>Everything You Need, Under One Roof.</p>
-<div class="buttons">
-<a class="btn whatsapp" href="https://wa.me/923216854182" target="_blank">💬 WhatsApp</a>
-<a class="btn call" href="tel:+923032584749">📞 Call Now</a>
-</div>
+  <h1>Al Masoom Super Store</h1>
+  <p>Everything You Need, Under One Roof.</p>
+
+  <div class="buttons">
+
+    <a class="btn whatsapp"
+       href="https://wa.me/923216854182?text=Assalam-o-Alaikum%20Al%20Masoom%20Super%20Store"
+       target="_blank">
+       💬 WhatsApp
+    </a>
+
+    <a class="btn call"
+       href="tel:03032584749">
+       📞 Call Now
+    </a>
+
+  </div>
 </section>
 
-<section class="section">
-<h2>Our Categories</h2>
-<div class="grid">
+<section>
+  <h2>Our Categories</h2>
 
-<div class="card">
-<div class="icon">💄</div>
-<h3>Cosmetics</h3>
-<p>Beauty and personal-care products.</p>
-</div>
+  <div class="grid">
 
-<div class="card">
-<div class="icon">🛒</div>
-<h3>Grocery</h3>
-<p>Daily household and grocery essentials.</p>
-</div>
+    <div class="card">
+      <div class="icon">💄</div>
+      <h3>Cosmetics</h3>
+      <p>Beauty and personal-care products.</p>
+    </div>
 
-<div class="card">
-<div class="icon">🥤</div>
-<h3>Beverages</h3>
-<p>Refreshing drinks and beverages.</p>
-</div>
+    <div class="card">
+      <div class="icon">🛒</div>
+      <h3>Grocery</h3>
+      <p>Daily household and grocery essentials.</p>
+    </div>
 
-<div class="card">
-<div class="icon">🔧</div>
-<h3>Gas Parts</h3>
-<p>Gas parts and useful accessories.</p>
-</div>
+    <div class="card">
+      <div class="icon">🥤</div>
+      <h3>Beverages</h3>
+      <p>Refreshing drinks and beverages.</p>
+    </div>
 
-</div>
+    <div class="card">
+      <div class="icon">🔧</div>
+      <h3>Gas Parts</h3>
+      <p>Gas parts and useful accessories.</p>
+    </div>
+
+  </div>
 </section>
 
-<section class="visit">
-<h2>Visit Our Store</h2>
-<div class="info">
-📍 Bank Chowk, Main Market, Model Town, Bahawalnagar<br>
-📱 WhatsApp: <a href="https://wa.me/923216854182">0321-6854182</a><br>
-📞 Phone: <a href="tel:+923032584749">0303-2584749</a>
-</div>
+<section class="info">
 
-<div class="buttons">
-<a class="btn whatsapp" href="https://wa.me/923216854182" target="_blank">Message Us on WhatsApp</a>
-</div>
+  <h2>Visit Our Store</h2>
+
+  <p>📍 Bank Chowk, Main Market, Model Town, Bahawalnagar</p>
+
+  <p>
+    📱 WhatsApp:
+    <a href="https://wa.me/923216854182" target="_blank">
+      0321-6854182
+    </a>
+  </p>
+
+  <p>
+    📞 Phone:
+    <a href="tel:03032584749">
+      0303-2584749
+    </a>
+  </p>
+
+  <a class="map-btn"
+     href="https://www.google.com/maps/search/?api=1&query=Bank+Chowk+Main+Market+Model+Town+Bahawalnagar"
+     target="_blank">
+     📍 Open Location in Google Maps
+  </a>
+
+  <div style="margin-top:25px;">
+    <a class="btn whatsapp"
+       href="https://wa.me/923216854182?text=Assalam-o-Alaikum%20Al%20Masoom%20Super%20Store"
+       target="_blank">
+       💬 Message Us on WhatsApp
+    </a>
+  </div>
+
 </section>
 
-<footer>© 2026 Al Masoom Super Store</footer>
+<footer>
+  © 2026 Al Masoom Super Store
+</footer>
 
 </body>
 </html>
