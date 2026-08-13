@@ -2,265 +2,1733 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Al Masoom Super Store | Bahawalnagar</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-  line-height:1.6;
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+color:#172033;
+line-height:1.6;
 }
 
 header{
-  background:#123f60;
-  color:white;
-  text-align:center;
-  padding:18px 12px;
-  font-size:24px;
-  font-weight:bold;
+background:#123f60;
+color:white;
+text-align:center;
+padding:18px 12px;
+font-size:24px;
+font-weight:bold;
 }
 
 .hero{
-  background:linear-gradient(135deg,#176b88,#238aa5);
-  color:white;
-  text-align:center;
-  padding:55px 20px;
+background:linear-gradient(135deg,#176b88,#238aa5);
+color:white;
+text-align:center;
+padding:55px 20px;
 }
 
 .hero h1{
-  font-size:36px;
-  margin-bottom:12px;
+font-size:36px;
+margin-bottom:12px;
 }
 
 .hero p{
-  font-size:18px;
-  margin-bottom:25px;
+font-size:18px;
+margin-bottom:25px;
 }
 
 .buttons{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-block;
-  text-decoration:none;
-  padding:13px 24px;
-  border-radius:8px;
-  font-weight:bold;
-  color:white;
+display:inline-block;
+text-decoration:none;
+padding:13px 24px;
+border-radius:8px;
+font-weight:bold;
+color:white;
+border:0;
+cursor:pointer;
+font-size:16px;
 }
 
 .whatsapp{
-  background:#25D366;
+background:#25D366;
 }
 
 .call{
-  background:#ffffff;
-  color:#123f60;
+background:white;
+color:#123f60;
 }
 
 section{
-  max-width:1100px;
-  margin:auto;
-  padding:45px 15px;
+max-width:1100px;
+margin:auto;
+padding:45px 15px;
 }
 
-section h2{
-  text-align:center;
-  color:#123f60;
-  font-size:28px;
-  margin-bottom:28px;
+.section-title{
+text-align:center;
+color:#123f60;
+font-size:30px;
+margin-bottom:28px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:18px;
+.categories{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
 }
 
-.card{
-  background:white;
-  border-radius:12px;
-  padding:28px 18px;
-  text-align:center;
-  box-shadow:0 5px 18px rgba(0,0,0,0.08);
+.category{
+background:white;
+border-radius:14px;
+padding:30px 18px;
+text-align:center;
+box-shadow:0 4px 16px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.2s;
+border:2px solid transparent;
 }
 
-.icon{
-  font-size:42px;
-  margin-bottom:10px;
+.category:hover{
+transform:translateY(-4px);
+border-color:#238aa5;
 }
 
-.card h3{
-  font-size:20px;
-  margin-bottom:8px;
+.category .icon{
+font-size:52px;
+margin-bottom:12px;
 }
 
-.card p{
-  color:#68717d;
+.category h3{
+font-size:21px;
+margin-bottom:8px;
 }
 
-.info{
-  background:#123f60;
-  color:white;
-  text-align:center;
-  padding:45px 20px;
+.category p{
+color:#687180;
 }
 
-.info h2{
-  color:white;
+/* PRODUCT SECTIONS */
+
+.product-section{
+display:none;
+background:#eef6f8;
+max-width:none;
 }
 
-.info p{
-  font-size:17px;
-  margin:8px 0;
+.product-section.active{
+display:block;
 }
 
-.info a{
-  color:white;
+.product-wrap{
+max-width:1100px;
+margin:auto;
 }
 
-.map-btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:13px 24px;
-  background:#ffffff;
-  color:#123f60 !important;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
+.back{
+background:#123f60;
+margin-bottom:22px;
+}
+
+.products{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.product{
+background:white;
+border-radius:14px;
+padding:20px;
+text-align:center;
+box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+
+.product .pic{
+font-size:55px;
+height:80px;
+}
+
+.product h3{
+font-size:20px;
+margin:8px 0;
+}
+
+.product .price{
+font-weight:bold;
+color:#176b88;
+font-size:18px;
+margin:8px 0 14px;
+}
+
+.product .small{
+color:#687180;
+font-size:14px;
+margin-bottom:14px;
+}
+
+.product-actions{
+display:flex;
+gap:8px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.product-actions .btn{
+padding:10px 14px;
+font-size:14px;
+}
+
+.details{
+background:#123f60;
+}
+
+.order{
+background:#25D366;
+}
+
+/* STORE */
+
+.store{
+background:#123f60;
+color:white;
+max-width:none;
+}
+
+.store-inner{
+max-width:1100px;
+margin:auto;
+}
+
+.store .section-title{
+color:white;
+}
+
+.store p{
+margin:10px 0;
+}
+
+.store a{
+color:white;
 }
 
 footer{
-  background:#082b3d;
-  color:white;
-  text-align:center;
-  padding:18px;
+background:#0d3049;
+color:white;
+text-align:center;
+padding:18px;
 }
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.65);
+z-index:100;
+align-items:center;
+justify-content:center;
+padding:18px;
+}
+
+.modal.show{
+display:flex;
+}
+
+.modal-box{
+background:white;
+width:min(520px,100%);
+border-radius:16px;
+padding:25px;
+position:relative;
+}
+
+.close{
+position:absolute;
+right:12px;
+top:8px;
+border:0;
+background:none;
+font-size:30px;
+cursor:pointer;
+}
+
+.modal-icon{
+text-align:center;
+font-size:70px;
+}
+
+.modal-box h2{
+text-align:center;
+color:#123f60;
+margin:8px 0;
+}
+
+.modal-box p{
+color:#5d6673;
+margin:8px 0;
+}
+
+.modal-price{
+text-align:center;
+font-size:21px;
+font-weight:bold;
+color:#176b88;
+margin:12px;
+}
+
+.modal .btn{
+width:100%;
+text-align:center;
+margin-top:10px;
+}
+
+/* MOBILE */
 
 @media(max-width:600px){
-  header{
-    font-size:21px;
-  }
 
-  .hero{
-    padding:45px 15px;
-  }
-
-  .hero h1{
-    font-size:30px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  section{
-    padding:38px 12px;
-  }
+header{
+font-size:20px;
 }
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section-title{
+font-size:27px;
+}
+
+.category{
+padding:25px 15px;
+}
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- HEADER -->
+
 <header>
-  Al Masoom Super Store
+Al Masoom Super Store
 </header>
 
-<section class="hero">
-  <h1>Al Masoom Super Store</h1>
-  <p>Everything You Need, Under One Roof.</p>
 
-  <div class="buttons">
+<!-- HERO -->
 
-    <a class="btn whatsapp"
-       href="https://wa.me/923216854182?text=Assalam-o-Alaikum%20Al%20Masoom%20Super%20Store"
-       target="_blank">
-       💬 WhatsApp
-    </a>
+<div class="hero">
 
-    <a class="btn call"
-       href="tel:03032584749">
-       📞 Call Now
-    </a>
+<h1>
+Al Masoom Super Store
+</h1>
 
-  </div>
+<p>
+Everything You Need, Under One Roof.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn whatsapp"
+href="https://wa.me/923216854182?text=Assalam-o-Alaikum%20Al%20Masoom%20Super%20Store%2C%20mujhe%20products%20ke%20bare%20mein%20maloomat%20chahiye."
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+
+<a
+class="btn call"
+href="tel:+923032584749">
+
+📞 Call Now
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+<h2 class="section-title">
+Our Categories
+</h2>
+
+
+<div class="categories">
+
+
+<!-- COSMETICS -->
+
+<div
+class="category"
+onclick="showCategory('cosmetics')">
+
+<div class="icon">
+💄
+</div>
+
+<h3>
+Cosmetics
+</h3>
+
+<p>
+Beauty and personal-care products.
+</p>
+
+</div>
+
+
+
+<!-- GROCERY -->
+
+<div
+class="category"
+onclick="showCategory('grocery')">
+
+<div class="icon">
+🛒
+</div>
+
+<h3>
+Grocery
+</h3>
+
+<p>
+Daily household and grocery essentials.
+</p>
+
+</div>
+
+
+
+<!-- BEVERAGES -->
+
+<div
+class="category"
+onclick="showCategory('beverages')">
+
+<div class="icon">
+🥤
+</div>
+
+<h3>
+Beverages
+</h3>
+
+<p>
+Refreshing drinks and beverages.
+</p>
+
+</div>
+
+
+
+<!-- GAS PARTS -->
+
+<div
+class="category"
+onclick="showCategory('gasparts')">
+
+<div class="icon">
+🔧
+</div>
+
+<h3>
+Gas Parts
+</h3>
+
+<p>
+Gas parts and useful accessories.
+</p>
+
+</div>
+
+
+</div>
+
 </section>
 
-<section>
-  <h2>Our Categories</h2>
 
-  <div class="grid">
 
-    <div class="card">
-      <div class="icon">💄</div>
-      <h3>Cosmetics</h3>
-      <p>Beauty and personal-care products.</p>
-    </div>
+<!-- COSMETICS -->
 
-    <div class="card">
-      <div class="icon">🛒</div>
-      <h3>Grocery</h3>
-      <p>Daily household and grocery essentials.</p>
-    </div>
+<section
+id="cosmetics"
+class="product-section">
 
-    <div class="card">
-      <div class="icon">🥤</div>
-      <h3>Beverages</h3>
-      <p>Refreshing drinks and beverages.</p>
-    </div>
+<div class="product-wrap">
 
-    <div class="card">
-      <div class="icon">🔧</div>
-      <h3>Gas Parts</h3>
-      <p>Gas parts and useful accessories.</p>
-    </div>
+<button
+class="btn back"
+onclick="backToCategories()">
 
-  </div>
+← Back to Categories
+
+</button>
+
+
+<h2 class="section-title">
+💄 Cosmetics Products
+</h2>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div class="pic">
+💄
+</div>
+
+<h3>
+Lipstick
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Different shades available.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'💄',
+'Lipstick',
+'Different shades available.',
+'Cosmetics'
+)">
+
+Details
+
+</button>
+
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Lipstick',
+'Cosmetics'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🧴
+</div>
+
+<h3>
+Face Cream
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Beauty and skincare item.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🧴',
+'Face Cream',
+'Beauty and skincare item.',
+'Cosmetics'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Face Cream',
+'Cosmetics'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🧴
+</div>
+
+<h3>
+Shampoo
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Hair-care products available.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🧴',
+'Shampoo',
+'Hair-care products available.',
+'Cosmetics'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Shampoo',
+'Cosmetics'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🧼
+</div>
+
+<h3>
+Beauty Soap
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Personal-care soap.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🧼',
+'Beauty Soap',
+'Personal-care soap.',
+'Cosmetics'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Beauty Soap',
+'Cosmetics'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
-<section class="info">
 
-  <h2>Visit Our Store</h2>
 
-  <p>📍 Bank Chowk, Main Market, Model Town, Bahawalnagar</p>
+<!-- GROCERY -->
 
-  <p>
-    📱 WhatsApp:
-    <a href="https://wa.me/923216854182" target="_blank">
-      0321-6854182
-    </a>
-  </p>
+<section
+id="grocery"
+class="product-section">
 
-  <p>
-    📞 Phone:
-    <a href="tel:03032584749">
-      0303-2584749
-    </a>
-  </p>
+<div class="product-wrap">
 
-  <a class="map-btn"
-     href="https://www.google.com/maps/search/?api=1&query=Bank+Chowk+Main+Market+Model+Town+Bahawalnagar"
-     target="_blank">
-     📍 Open Location in Google Maps
-  </a>
+<button
+class="btn back"
+onclick="backToCategories()">
 
-  <div style="margin-top:25px;">
-    <a class="btn whatsapp"
-       href="https://wa.me/923216854182?text=Assalam-o-Alaikum%20Al%20Masoom%20Super%20Store"
-       target="_blank">
-       💬 Message Us on WhatsApp
+← Back to Categories
 
+</button>
+
+
+<h2 class="section-title">
+🛒 Grocery Products
+</h2>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div class="pic">
+🍚
+</div>
+
+<h3>
+Rice
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Different varieties available.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🍚',
+'Rice',
+'Different varieties available.',
+'Grocery'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Rice',
+'Grocery'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🌾
+</div>
+
+<h3>
+Flour
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Household grocery essential.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🌾',
+'Flour',
+'Household grocery essential.',
+'Grocery'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Flour',
+'Grocery'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🫗
+</div>
+
+<h3>
+Cooking Oil
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Cooking oil and related items.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🫗',
+'Cooking Oil',
+'Cooking oil and related items.',
+'Grocery'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Cooking Oil',
+'Grocery'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🧂
+</div>
+
+<h3>
+Salt
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Daily kitchen essential.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🧂',
+'Salt',
+'Daily kitchen essential.',
+'Grocery'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Salt',
+'Grocery'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- BEVERAGES -->
+
+<section
+id="beverages"
+class="product-section">
+
+<div class="product-wrap">
+
+<button
+class="btn back"
+onclick="backToCategories()">
+
+← Back to Categories
+
+</button>
+
+
+<h2 class="section-title">
+🥤 Beverages Products
+</h2>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div class="pic">
+🥤
+</div>
+
+<h3>
+Soft Drink
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Cold drinks and soft beverages.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🥤',
+'Soft Drink',
+'Cold drinks and soft beverages.',
+'Beverages'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Soft Drink',
+'Beverages'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🧃
+</div>
+
+<h3>
+Juice
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Juices and refreshing drinks.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🧃',
+'Juice',
+'Juices and refreshing drinks.',
+'Beverages'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Juice',
+'Beverages'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+💧
+</div>
+
+<h3>
+Mineral Water
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Bottled drinking water.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'💧',
+'Mineral Water',
+'Bottled drinking water.',
+'Beverages'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Mineral Water',
+'Beverages'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+⚡
+</div>
+
+<h3>
+Energy Drink
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Energy and refreshing drinks.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'⚡',
+'Energy Drink',
+'Energy and refreshing drinks.',
+'Beverages'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Energy Drink',
+'Beverages'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GAS PARTS -->
+
+<section
+id="gasparts"
+class="product-section">
+
+<div class="product-wrap">
+
+<button
+class="btn back"
+onclick="backToCategories()">
+
+← Back to Categories
+
+</button>
+
+
+<h2 class="section-title">
+🔧 Gas Parts Products
+</h2>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div class="pic">
+🔧
+</div>
+
+<h3>
+Gas Regulator
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Gas regulator and related parts.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🔧',
+'Gas Regulator',
+'Gas regulator and related parts.',
+'Gas Parts'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Gas Regulator',
+'Gas Parts'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🔩
+</div>
+
+<h3>
+Gas Pipe
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Gas pipe and accessories.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🔩',
+'Gas Pipe',
+'Gas pipe and accessories.',
+'Gas Parts'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Gas Pipe',
+'Gas Parts'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+⚙️
+</div>
+
+<h3>
+Gas Valve
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Gas valves and fittings.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'⚙️',
+'Gas Valve',
+'Gas valves and fittings.',
+'Gas Parts'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Gas Valve',
+'Gas Parts'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="product">
+
+<div class="pic">
+🔩
+</div>
+
+<h3>
+Gas Fittings
+</h3>
+
+<div class="price">
+Price: Ask on WhatsApp
+</div>
+
+<div class="small">
+Useful gas fittings and accessories.
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn details"
+onclick="openProduct(
+'🔩',
+'Gas Fittings',
+'Useful gas fittings and accessories.',
+'Gas Parts'
+)">
+
+Details
+
+</button>
+
+<button
+class="btn order"
+onclick="orderProduct(
+'Gas Fittings',
+'Gas Parts'
+)">
+
+WhatsApp Order
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STORE INFORMATION -->
+
+<section class="store">
+
+<div class="store-inner">
+
+<h2 class="section-title">
+Visit Our Store
+</h2>
+
+<p>
+📍 Bank Chowk, Main Market,
+Model Town, Bahawalnagar
+</p>
+
+<p>
+📱 WhatsApp:
+<a href="https://wa.me/923216854182">
+0321-6854182
+</a>
+</p>
+
+<p>
+📞 Phone:
+<a href="tel:+923032584749">
+0303-2584749
+</a>
+</p>
+
+
+<div
+class="buttons"
+style="margin-top:20px">
+
+
+<a
+class="btn call"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Bank+Chowk+Main+Market+Model+Town+Bahawalnagar">
+
+📍 Open Location in Google Maps
+
+</a>
+
+
+<a
+class="btn whatsapp"
+target="_blank"
+href="https://wa.me/923216854182">
+
+💬 Message Us on WhatsApp
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Al Masoom Super Store
+
+</footer>
+
+
+
+<!-- PRODUCT DETAILS POPUP -->
+
+<div
+id="modal"
+class="modal"
+onclick="closeModal(event)">
+
+
+<div class="modal-box">
+
+
+<button
+class="close"
+onclick="closeModal()">
+
+×
+
+</button>
+
+
+<div
+id="modalIcon"
+class="modal-icon">
+</div>
+
+
+<h2 id="modalName">
+</h2>
+
+
+<p id="modalCategory">
+</p>
+
+
+<p id="modalDescription">
+</p>
+
+
+<div
+id="modalPrice"
+class="modal-price">
+
+Price: Ask on WhatsApp
+
+</div>
+
+
+<button
+id="modalOrder"
+class="btn order">
+
+💬 Order on WhatsApp
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const WHATSAPP =
+"923216854182";
+
+
+/* CATEGORY OPEN */
+
+function showCategory(id){
+
+document
+.querySelectorAll(".product-section")
+.forEach(function(section){
+
+section.classList.remove("active");
+
+});
+
+
+const section =
+document.getElementById(id);
+
+
+if(section){
+
+section.classList.add("active");
+
+
+setTimeout(function(){
+
+section.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+},50);
+
+}
+
+}
+
+
+
+/* BACK TO CATEGORIES */
+
+function backToCategories(){
+
+document
+.querySelectorAll(".product-section")
+.forEach(function(section){
+
+section.classList.remove("active");
+
+});
+
+
+document
+.getElementById("categories")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+
+/* WHATSAPP ORDER */
+
+function orderProduct(product,category){
+
+const message =
+"Assalam-o-Alaikum Al Masoom Super Store,%0A%0A" +
+
+"Mujhe ye product chahiye:%0A" +
+
+"Product: " +
+encodeURIComponent(product) +
+
+"%0A" +
+
+"Category: " +
+encodeURIComponent(category) +
+
+"%0A%0A" +
+
+"Meharbani karke price aur availability bata dein.";
+
+
+window.open(
+"https://wa.me/" +
+WHATSAPP +
+"?text=" +
+message,
+"_blank"
+);
+
+}
+
+
+
+/* PRODUCT DETAILS */
+
+function openProduct(
+icon,
+name,
+description,
+category
+){
+
+document
+.getElementById("modalIcon")
+.textContent=icon;
+
+
+document
+.getElementById("modalName")
+.textContent=name;
+
+
+document
+.getElementById("modalCategory")
+.textContent=
+"Category: " +
+category;
+
+
+document
+.getElementById("modalDescription")
+.textContent=
+description;
+
+
+document
+.getElementById("modalOrder")
+.onclick=function(){
+
+orderProduct(
+name,
+category
+);
+
+};
+
+
+document
+.getElementById("modal")
+.classList.add("show");
+
+}
+
+
+
+/* CLOSE DETAILS */
+
+function closeModal(event){
+
+if(
+!event ||
+event.target.id==="modal" ||
+event.target.classList.contains("close")
+){
+
+document
+.getElementById("modal")
+.classList.remove("show");
+
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
